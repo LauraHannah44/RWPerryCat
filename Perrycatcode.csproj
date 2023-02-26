@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C462D418-374C-4B99-BAF7-925248899242}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PerryCat</RootNamespace>
+    <AssemblyName>PerryCat</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PerryCat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoundResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoundResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\perryFace.txt" />
+    <EmbeddedResource Include="SoundResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SoundResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoundResources\Theme_Song.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\perryFace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\perryHead.png" />
+    <EmbeddedResource Include="Resources\perryHead.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\perryLegs.png" />
+    <EmbeddedResource Include="Resources\perryLegs.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\perryAltFace.png" />
+    <EmbeddedResource Include="Resources\perryAltFace.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SoundResources\Platypus_Noise.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\scene.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\Sleep - 1.png" />
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\Sleep - 2 - Perry.png" />
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\Sleep - 3.png" />
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\Sleep - 4.png" />
+    <EmbeddedResource Include="Resources\Scenes\SleepScreen\Sleep - 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\Perry - 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\scene.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\Background - 5.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\BkgPlants - 3.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\FgPlants - 0.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\Haze - 4.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenu\Vines - 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SelectMenuAscended\Bg.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenuAscended\Ghost.png" />
+    <EmbeddedResource Include="Resources\Scenes\SelectMenuAscended\Glow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Scenes\SelectMenuAscended\scene.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>References\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfigMachine">
+      <HintPath>References\ConfigMachine.dll</HintPath>
+    </Reference>
+    <Reference Include="EnumExtender">
+      <HintPath>References\EnumExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="HOOKS-Assembly-CSharp">
+      <HintPath>References\HOOKS-Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JollyCoop">
+      <HintPath>References\JollyCoop.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>References\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="Partiality">
+      <HintPath>References\Partiality.dll</HintPath>
+    </Reference>
+    <Reference Include="SlugBase">
+      <HintPath>References\SlugBase.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>References\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Scenes\NewDeath\FlowerA.png" />
+    <Content Include="Resources\Scenes\NewDeath\FlowerA2.png" />
+    <Content Include="Resources\Scenes\NewDeath\FlowerB.png" />
+    <Content Include="Resources\Scenes\NewDeath\FlowerB2.png" />
+    <Content Include="Resources\Scenes\NewDeath\FlowerC.png" />
+    <Content Include="Resources\Scenes\NewDeath\FlowerC2.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 1.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 2 - Perry.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 3.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 4.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 5.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 55.png" />
+    <Content Include="Resources\Scenes\NewDeath\New Death - 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scenes\NewDeath\scene.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y $(TargetPath) "C:\Program Files (x86)\Steam\steamapps\common\Rain World\Mods"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
